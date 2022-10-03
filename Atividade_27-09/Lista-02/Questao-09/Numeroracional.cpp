@@ -43,29 +43,41 @@ Numeroracional Numeroracional::operator/(Numeroracional aux){
     divisao.denominador = this->denominador*aux.numerador;
     return divisao;
 }
-Numeroracional Numeroracional::operator<(Numeroracional aux){
-    float valorThis = this->numerador/this->denominador;
-    float valorAux = aux.numerador/aux.denominador;
+Numeroracional Numeroracional::operator<=(Numeroracional aux){
+    float auxNumerador = this->numerador;
+    float auxDenominador = this->denominador;
+    float valorThis = auxNumerador/auxDenominador;
+    auxNumerador = aux.numerador;
+    auxDenominador = aux.denominador;
+    float valorAux = auxNumerador/auxDenominador;
     Numeroracional eu(this->numerador,this->denominador);
-    if(valorThis < valorAux){
+    if(valorThis <= valorAux){
         return eu;
     }else{
         return aux;
     }
 }
-Numeroracional Numeroracional::operator>(Numeroracional aux){
-    float valorThis = this->numerador/this->denominador;
-    float valorAux = aux.numerador/aux.denominador;
+Numeroracional Numeroracional::operator>=(Numeroracional aux){
+    float auxNumerador = this->numerador;
+    float auxDenominador = this->denominador;
+    float valorThis = auxNumerador/auxDenominador;
+    auxNumerador = aux.numerador;
+    auxDenominador = aux.denominador;
+    float valorAux = auxNumerador/auxDenominador;
     Numeroracional eu(this->numerador,this->denominador);
-    if(valorThis > valorAux){
+    if(valorThis >= valorAux){
         return eu;
     }else{
         return aux;
     }
 }
 bool Numeroracional::operator!=(Numeroracional aux){
-    float valorThis = this->numerador/this->denominador;
-    float valorAux = aux.numerador/aux.denominador;
+    float auxNumerador = this->numerador;
+    float auxDenominador = this->denominador;
+    float valorThis = auxNumerador/auxDenominador;
+    auxNumerador = aux.numerador;
+    auxDenominador = aux.denominador;
+    float valorAux = auxNumerador/auxDenominador;
     if(valorThis != valorAux){
         return true;
     }else{
@@ -73,8 +85,12 @@ bool Numeroracional::operator!=(Numeroracional aux){
     }
 }
 bool Numeroracional::operator==(Numeroracional aux){
-    float valorThis = this->numerador/this->denominador;
-    float valorAux = aux.numerador/aux.denominador;
+    float auxNumerador = this->numerador;
+    float auxDenominador = this->denominador;
+    float valorThis = auxNumerador/auxDenominador;
+    auxNumerador = aux.numerador;
+    auxDenominador = aux.denominador;
+    float valorAux = auxNumerador/auxDenominador;
     if(valorThis == valorAux){
         return true;
     }else{

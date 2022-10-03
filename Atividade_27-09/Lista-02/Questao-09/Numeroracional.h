@@ -12,8 +12,8 @@ class Numeroracional{
         Numeroracional operator-(Numeroracional);
         Numeroracional operator*(Numeroracional);
         Numeroracional operator/(Numeroracional);
-        Numeroracional operator<(Numeroracional);
-        Numeroracional operator>(Numeroracional);
+        Numeroracional operator<=(Numeroracional);
+        Numeroracional operator>=(Numeroracional);
         bool operator!=(Numeroracional);
         bool operator==(Numeroracional);
         void print();
