@@ -101,3 +101,23 @@ void Numeroracional::print(){
     cout << "Numerador: " << this->numerador << endl;
     cout << "Denominador: " << this->denominador << endl;
 }
+Numeroracional Numeroracional::operator+(int auxNum){
+    Numeroracional aux(auxNum, 1);
+    Numeroracional eu(this->numerador, this->denominador);
+    return eu + aux;
+}
+Numeroracional Numeroracional::operator-(int auxNum){
+    Numeroracional aux(auxNum, 1);
+    Numeroracional eu(this->numerador, this->denominador);
+    return eu - aux;
+}
+Numeroracional Numeroracional::operator*(int auxNum){
+    Numeroracional aux(auxNum, 1);
+    Numeroracional eu(this->numerador, this->denominador);
+    return eu * aux;
+}
+Numeroracional Numeroracional::operator/(int auxNum){
+    Numeroracional aux(auxNum, 1);
+    Numeroracional eu(this->numerador, this->denominador);
+    return eu - aux;
+}
