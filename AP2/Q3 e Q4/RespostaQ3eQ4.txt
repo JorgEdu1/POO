@@ -1,0 +1,42 @@
+Aluno: Jorge Eduardo Silva Sousa - CC 2° Semestre.
+
+Questao 03: Explique os conceitos de downcasting. Sem downcasting o que não é possível evitar?
+r: downcasting é na realidade apenas a atribuição de um classe base para uma classe filha, se eu tiver o seguinte caso
+
+PAI base;
+Filho *pFilho;
+pFilho = base;
+
+isso pode acontecer sem nenhum problema, mas pode ocorrer uma excessão, podemos usar a funçao, acho que é funçao pelo  menos, dynamic_cast, na hora dessa atribuiçao,
+se acontecer um problema e nao acontecer a excessão, pFIlho recebe 0, e sabemos ai que ele deu erro.
+
+Questao 04: Explique os conceitos de classe abstrata e concreta.
+
+Abstrata: estudando, vi um exemplo de geometria, por exemplo, temos a classe pai de todas, a classe forma, ela tem um metodo "printar"(vou deixar ele abstrato) que nao pode ser usado, pois forma 
+nao tem forma, apos isso posso fazer minha classe quadrado, que é bidimensionavel e outra classe cubo, na dentro da classe quadrado, faco um metodo com o mesmo nome do metodo abstrato da clase pai,
+e printo altura e cumprimento do quadrado, faço o mesmo na classe cubo, porem printo nesse metodo altura, cumprimento e (profundidade ou largura), e na main eu faço isso:
+
+FORMA *forma[2];
+QUADRADO quadrado;
+CUBO cubo;
+forma[0] = quadrado;
+forma[1] = cubo;
+for(i = 0; i < 2; i++){
+    forma[i]->print;
+}
+
+esse vai ser o meu print:
+DIMENSOES DO QUADRADO:
+altura: x
+cumprimento: y
+DIMENSOES DO CUBO:
+altura: x
+cumprimento: y
+largura: z
+
+ou seja, o metodo print da classe forma é abstrata, e se molda ao tipo primitivo do objeto que o ponteiro aponta e busca o respectivo print deste objeto, isso é classe abstrata.
+
+Concreta: é basicamente o contrario da anterior, em vez do metodo virtual abstrato da classe pai(forma) mudar de forma com base ao objeto apontado, ele usa o print do metodo pai mesmo,
+contrariando conceitos polimorficos.
+
+FINALIZANDO: Classe abstrata sao classes polimorficas, e classes concretas sao as subclasses dessa classse abstrata, e que devem ser concretas, pois seu pai ja faz o papel de abstrata e virtual.
